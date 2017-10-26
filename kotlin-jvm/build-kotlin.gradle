@@ -14,9 +14,7 @@ kotlin {
 
   dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
-    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.19.2"
-    
-    compile "junit:junit:4.12"
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:0.19.2"
   }
 
   compileKotlin {

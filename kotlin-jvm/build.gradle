@@ -10,6 +10,11 @@ buildscript {
   }
 }
 
+repositories{
+  jcenter()
+  mavenCentral()
+} 
+
 group 'org.jonnyzzz'
 apply from: 'build-kotlin.gradle'
 
@@ -17,3 +22,8 @@ apply from: 'build-kotlin.gradle'
 task noop() {
 }
 
+dependencies {
+  compile "org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.4"
+
+  compile "junit:junit:4.12"
+}
