@@ -25,5 +25,9 @@ task noop() {
 dependencies {
   compile "org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.4"
 
+  compile 'com.fasterxml.jackson.core:jackson-core:2.9.1'
+  compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.1'
+  compile 'com.fasterxml.jackson.core:jackson-databind:2.9.1'
+
   compile "junit:junit:4.12"
 }
