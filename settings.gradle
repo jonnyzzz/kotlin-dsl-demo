@@ -2,5 +2,6 @@ rootProject.name="jonnyzzz-kotlin-dsl-demo"
 
 
 includeBuild 'kotlin-jvm'
+includeBuild 'kotlin-android'
 
 
