@@ -6,11 +6,17 @@ public class JavaClientExample {
     
     builder.setName("Eugene");
     builder.setLastName("Petrenko");
-    builder.setTwitter("@jonnyzzz");
-    builder.setCompany("JetBrains");
+
+    final JavaTwitterBuilder twitterBuilder = new JavaTwitterBuilder();
+    twitterBuilder.setHandle("@jonnyzzz");
+    builder.setTwitter(twitterBuilder.build());
+
+    final JavaCompanyBuilder companyBuilder = new JavaCompanyBuilder();
+    companyBuilder.setName("JetBrains");
+    builder.setCompany(companyBuilder.build());
+
 
     final JavaClient client = builder.build();
-
     System.out.println("Created client is: " + client);
   }
 }

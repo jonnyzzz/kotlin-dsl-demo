@@ -5,8 +5,8 @@ import org.jetbrains.annotations.NotNull;
 public class JavaClientBuilder {
   private String myName;
   private String myLastName;
-  private String myCompany;
-  private String myTwitter;
+  private JavaCompany myCompany;
+  private JavaTwitter myTwitter;
 
   public String getName() {
     return myName;
@@ -24,19 +24,19 @@ public class JavaClientBuilder {
     myLastName = lastName;
   }
 
-  public String getCompany() {
+  public JavaCompany getCompany() {
     return myCompany;
   }
 
-  public void setCompany(String company) {
+  public void setCompany(JavaCompany company) {
     myCompany = company;
   }
 
-  public String getTwitter() {
+  public JavaTwitter getTwitter() {
     return myTwitter;
   }
 
-  public void setTwitter(String twitter) {
+  public void setTwitter(JavaTwitter twitter) {
     myTwitter = twitter;
   }
 
