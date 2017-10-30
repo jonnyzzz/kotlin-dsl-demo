@@ -8,6 +8,7 @@ fun fibonacci() = buildSequence {
   // this sequence is infinite
   while(true) {
     yield(terms.first)
+
     terms = Pair(terms.second, terms.first + terms.second)
   }
 }

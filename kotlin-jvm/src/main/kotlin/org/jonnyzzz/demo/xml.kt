@@ -5,6 +5,7 @@ import org.jonnyzzz.kotlin.xml.bind.jdom.JXML
 import org.jonnyzzz.kotlin.xml.bind.jdom.XUnknown
 import org.jonnyzzz.kotlin.xml.dsl.jdom.jdom
 
+
 class Example {
   //declares a property of type String that load data from "ROOT/aaa/ggg/text()"
   var content by JXML / "aaa" / "ggg" / XText
