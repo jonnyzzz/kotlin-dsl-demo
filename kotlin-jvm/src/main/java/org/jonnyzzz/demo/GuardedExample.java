@@ -10,5 +10,9 @@ public class GuardedExample {
   private Lock theLock;
 
 
+  void seeAlso() {
+//    com.google.common.cache.LocalCache.Segment.drainKeyReferenceQueue();
+  }
+
 }
 
