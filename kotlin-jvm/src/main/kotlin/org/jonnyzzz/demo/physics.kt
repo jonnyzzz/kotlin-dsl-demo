@@ -1,4 +1,4 @@
-package org.jonnyzzz.demo
+package org.jonnyzzz.demo.math
 
 object Mass
 object Time
