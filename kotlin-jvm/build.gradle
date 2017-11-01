@@ -32,7 +32,7 @@ dependencies {
   compile "org.jonnyzzz.kotlin.xml.bind:jdom:0.1.9"
   compile "org.jonnyzzz.kotlin.xml.dsl:jdom:0.1.6"
 
-  compile 'com.google.guava:guava:21.0'
+  compile 'com.google.guava:guava:23.3-jre'
 
   compile "junit:junit:4.12"
 }
