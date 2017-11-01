@@ -40,5 +40,6 @@ fun main(args: Array<String>) {
     element("some-other-element")
     text("Hello World")
   }
-  println( DOM)
+  println(DOM)
+  println(Example())
 }
