@@ -3,14 +3,20 @@ package org.jonnyzzz.demo.math
 object Mass
 object Time
 
-
-
 val m = Mass
 val s = Time
 
 
 
-val furmula =  10 * m / s
+
+
+
+val formula =  10 * m / s
+
+
+
+
+
 
 
 operator fun <A, B> A.times(m: B) = OpMul(this, m)
@@ -26,3 +32,7 @@ class OpMul<A, B>(a: A, b: B) : Op<A,B>(a, b)
 class OpPlus<A>(a: A, b: A): Op<A,A>(a,b)
 class OpMinus<A>(a: A, b: A): Op<A,A>(a,b)
 
+
+fun main(args: Array<String>) {
+  println(formula)
+}
