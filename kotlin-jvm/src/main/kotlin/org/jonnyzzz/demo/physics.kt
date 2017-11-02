@@ -22,7 +22,13 @@ val formula =  10 * m / s
 operator fun <A, B> A.times(m: B) = OpMul(this, m)
 operator fun <A, B> A.div(m: B) = OpDiv(this, m)
 
-operator fun <A> A.plus(m: A) = OpPlus(this, m)
+
+
+operator fun <A> A.plus(m: B) = OpPlus(this, m)
+
+
+
+
 operator fun <A> A.minus(m: A) = OpMinus(this, m)
 
 open class Op<A, B>(val a: A, val b: B)

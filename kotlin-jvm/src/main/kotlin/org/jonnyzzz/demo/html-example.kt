@@ -14,6 +14,7 @@ val html = buildString {
             }
             body {
               h1 { +"Hello!" }
+
               +"This is a most"
               +"trivial page"
               strong { +"ever" }
