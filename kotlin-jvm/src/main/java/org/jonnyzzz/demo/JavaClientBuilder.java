@@ -3,17 +3,17 @@ package org.jonnyzzz.demo;
 import org.jetbrains.annotations.NotNull;
 
 public class JavaClientBuilder {
-  private String myName;
+  private String myFirstName;
   private String myLastName;
   private JavaCompany myCompany;
   private JavaTwitter myTwitter;
 
-  public String getName() {
-    return myName;
+  public String getFirstName() {
+    return myFirstName;
   }
 
-  public void setName(String name) {
-    myName = name;
+  public void setFirstName(String firstName) {
+    myFirstName = firstName;
   }
 
   public String getLastName() {
@@ -42,6 +42,6 @@ public class JavaClientBuilder {
 
   @NotNull
   public JavaClient build() {
-    return new JavaClient(myName, myLastName, myCompany, myTwitter);
+    return new JavaClient(myFirstName, myLastName, myCompany, myTwitter);
   }
 }

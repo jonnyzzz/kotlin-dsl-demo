@@ -1,20 +1,20 @@
 package org.jonnyzzz.demo;
 
 public class JavaClient {
-  private final String myName;
+  private final String myFirstName;
   private final String myLastName;
   private final JavaCompany myCompany;
   private final JavaTwitter myTwitter;
 
-  public JavaClient(String name, String lastName, JavaCompany company, JavaTwitter twitter) {
-    myName = name;
+  public JavaClient(String firstName, String lastName, JavaCompany company, JavaTwitter twitter) {
+    myFirstName = firstName;
     myLastName = lastName;
     myCompany = company;
     myTwitter = twitter;
   }
 
-  public String getName() {
-    return myName;
+  public String getFirstName() {
+    return myFirstName;
   }
 
   public String getLastName() {

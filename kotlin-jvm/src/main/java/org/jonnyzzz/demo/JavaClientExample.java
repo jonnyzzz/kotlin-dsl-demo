@@ -4,7 +4,7 @@ public class JavaClientExample {
   public static void main(String[] args) {
     final JavaClientBuilder builder = new JavaClientBuilder();
     
-    builder.setName("Eugene");
+    builder.setFirstName("Eugene");
     builder.setLastName("Petrenko");
 
     final JavaTwitterBuilder twitterBuilder = new JavaTwitterBuilder();
@@ -13,6 +13,7 @@ public class JavaClientExample {
 
     final JavaCompanyBuilder companyBuilder = new JavaCompanyBuilder();
     companyBuilder.setName("JetBrains");
+    companyBuilder.setCity("Munich");
     builder.setCompany(companyBuilder.build());
 
 
