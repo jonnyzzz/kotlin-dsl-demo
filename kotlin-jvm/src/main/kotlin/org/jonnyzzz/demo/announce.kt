@@ -1,3 +1,5 @@
+@file:Suppress("UNUSED_PARAMETER", "unused", "FunctionName")
+
 package org.jonnyzzz.demo
 
 
