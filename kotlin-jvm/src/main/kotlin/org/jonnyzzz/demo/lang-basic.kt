@@ -1,4 +1,5 @@
-package org.jonnyzzz.demo.lang_basic
+package org.jonnyzzz.demo.langbasic
+
 
 
 fun main(args: Array<String>) {
