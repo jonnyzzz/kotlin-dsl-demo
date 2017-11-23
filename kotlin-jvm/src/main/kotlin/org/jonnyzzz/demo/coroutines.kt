@@ -1,13 +1,11 @@
 package org.jonnyzzz.demo
 
-import kotlinx.coroutines.experimental.async
-import kotlinx.coroutines.experimental.runBlocking
-import kotlinx.coroutines.experimental.suspendCancellableCoroutine
+import kotlinx.coroutines.experimental.*
 import kotlin.concurrent.thread
 import kotlin.coroutines.experimental.buildSequence
 
 
-fun main(args: Array<String>) {
+fun main2(args: Array<String>) {
   runBlocking {
     `suspend fun`()
   }
@@ -47,4 +45,21 @@ fun powers(seed: Long) = buildSequence {
 
     v += seed
   }
+}
+
+fun main() = runBlocking {
+  val jobs = List(100_000) {
+    launch {
+      delay(1000L)
+      print(".")
+    }
+  }
+
+  jobs.forEach { it.join() }
+}
+
+
+
+fun main(args: Array<String>) {
+  main()
 }
