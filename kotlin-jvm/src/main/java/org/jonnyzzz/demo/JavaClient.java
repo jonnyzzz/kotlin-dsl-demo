@@ -28,4 +28,8 @@ public class JavaClient {
   public JavaTwitter getTwitter() {
     return myTwitter;
   }
+
+  public String getHelloMessage() {
+    return "Foo";
+  }
 }
