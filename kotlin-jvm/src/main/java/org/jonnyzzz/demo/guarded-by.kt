@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Lock
 import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
 
-class GuardedBy<out T>(
+class Guarded<out T>(
         val value: T,
         val lock: Lock = ReentrantLock()
 ) {
@@ -23,7 +23,7 @@ class State {
 }
 
 class WithLock {
-  val guarded = GuardedBy(State())
+  val guarded = Guarded(State())
 
   fun usage() {
     guarded {
@@ -33,10 +33,6 @@ class WithLock {
     }
   }
 }
-
-
-
-
 
 
 class Usage {
