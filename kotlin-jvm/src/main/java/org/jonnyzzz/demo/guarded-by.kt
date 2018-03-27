@@ -11,7 +11,7 @@ class Guarded<out T>(
         val lock: Lock = ReentrantLock()
 ) {
 
-  operator fun <R> invoke(action: T.() -> R) =
+  inline operator fun <R> invoke(action: T.() -> R) =
           lock.withLock {
             value.action()
           }
