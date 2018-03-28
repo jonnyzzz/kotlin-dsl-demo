@@ -14,6 +14,11 @@ fun main(args: Array<String>) {
 
 
 }
+
+val Enterprise = Any()
+val UserGroup = Any()
+infix fun Any.Java(a:Any) = Any()
+
 object Join
 val today = Any()
 infix fun Any.`@jonnyzzz`(b: Any) = this
