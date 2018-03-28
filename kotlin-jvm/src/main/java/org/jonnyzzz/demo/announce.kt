@@ -5,20 +5,27 @@ package org.jonnyzzz.demo
 
 fun main(args: Array<String>) {
 
-  DSLs.talk {
-    + liveCoding
-    and IntelliJ IDEA
-  } in 42.m
+  Join `@jonnyzzz` today {
+    DSLs talk {
+      + liveCoding
+      and IntelliJ IDEA
+    }
+  } in Linz
 
 
 }
+object Join
+val today = Any()
+infix fun Any.`@jonnyzzz`(b: Any) = this
+object Linz
+operator fun Any.invoke(a: () -> Unit) = Any()
 
 private val Any.m: Any
   get() {
     TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
   }
 
-private operator fun Any.contains(talk: Unit): Boolean {
+operator fun Any.contains(talk: Any): Boolean {
   TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 }
 
@@ -27,11 +34,11 @@ object liveCoding {
   }
 }
 
-object IDEA
+val IDEA = Any()
 
 object DSLs {
-  fun talk(x:DSLs.() -> Unit) = Unit
+  infix fun talk(x:DSLs.() -> Unit) = Unit
 
-      infix fun IntelliJ(x:IDEA) = 42
+      infix fun IntelliJ(x:Any) = 42
   val and: DSLs = this
 }
