@@ -5,15 +5,27 @@ package org.jonnyzzz.demo
 
 fun main(args: Array<String>) {
 
-  Join `@jonnyzzz` today {
-    DSLs talk {
-      + liveCoding
-      and IntelliJ IDEA
-    }
-  } in Linz
+  `@jonnyzzz` and `@maartenballiauw` speak {
+      Kotlin and `C#`
+      + Live demos
+      with Rider and IntelliJ IDEA
+  } at NDCMinnesota
 
 
 }
+
+val NDCMinnesota = Any()
+infix fun Any.at(x:Any) = Any()
+val Kotlin = Any()
+operator fun Any.unaryPlus() = Any()
+val `C#` = Any()
+val Live = Any()
+val with = Any()
+infix fun Any.demos(x:Any) = Any()
+infix fun Any.Rider(x:Any) = Any()
+infix fun Any.IntelliJ(x:Any) = Any()
+
+val IntelliJ = Any()
 
 val Enterprise = Any()
 val UserGroup = Any()
@@ -21,7 +33,13 @@ infix fun Any.Java(a:Any) = Any()
 
 object Join
 val today = Any()
-infix fun Any.`@jonnyzzz`(b: Any) = this
+val and = Any()
+infix fun Any.and(a:Any) = Any()
+val `@jonnyzzz` = Any()
+val `@maartenballiauw` = Any()
+
+infix fun Any.talk(x:() -> Unit) {}
+infix fun Any.speak(x:() -> Unit) {}
 object Linz
 operator fun Any.invoke(a: () -> Unit) = Any()
 
