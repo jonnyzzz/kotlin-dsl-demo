@@ -1,4 +1,4 @@
-package org.jonnyzzz.demo;
+package corp.model;
 
 import org.jetbrains.annotations.NotNull;
 

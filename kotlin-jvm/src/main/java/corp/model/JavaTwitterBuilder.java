@@ -1,4 +1,4 @@
-package org.jonnyzzz.demo;
+package corp.model;
 
 public class JavaTwitterBuilder {
   private String handle;

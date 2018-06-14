@@ -1,4 +1,4 @@
-package org.jonnyzzz.demo;
+package corp.model;
 
 public class JavaTwitter {
   private final String handle;

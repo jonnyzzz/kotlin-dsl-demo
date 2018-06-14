@@ -1,4 +1,4 @@
-package org.jonnyzzz.demo;
+package corp.model;
 
 public class JavaClient {
   private final String myFirstName;
