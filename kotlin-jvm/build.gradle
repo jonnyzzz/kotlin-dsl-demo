@@ -1,5 +1,5 @@
 buildscript {
-  ext.kotlin_version = '1.2.41'
+  ext.kotlin_version = '1.3.0'
 
   repositories {
     mavenCentral()
@@ -32,7 +32,12 @@ dependencies {
   compile "org.jonnyzzz.kotlin.xml.bind:jdom:0.1.9"
   compile "org.jonnyzzz.kotlin.xml.dsl:jdom:0.1.6"
 
-  compile 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.19.3'
+
+  implementation "io.reactivex.rxjava2:rxjava:2.2.2"
+  implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.0'
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.0.0'
+
 
   compile 'com.google.guava:guava:23.3-jre'
 

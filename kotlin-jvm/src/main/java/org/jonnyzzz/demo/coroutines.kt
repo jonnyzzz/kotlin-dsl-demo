@@ -1,8 +1,12 @@
 package org.jonnyzzz.demo
 
-import kotlinx.coroutines.experimental.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.concurrent.thread
-import kotlin.coroutines.experimental.buildSequence
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 
 
 fun main2(args: Array<String>) {
@@ -37,7 +41,7 @@ fun someLongRunningAsyncAction(r: ActionListener<String>) {
   }
 }
 
-fun powers(seed: Long) = buildSequence {
+fun powers(seed: Long) = sequence {
   var v = 1L
   while (true) {
 
@@ -58,8 +62,7 @@ fun main() = runBlocking {
   jobs.forEach { it.join() }
 }
 
-
-
 fun main(args: Array<String>) {
   main()
 }
+

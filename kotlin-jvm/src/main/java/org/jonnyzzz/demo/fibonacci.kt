@@ -1,8 +1,6 @@
 package org.jonnyzzz.demo
 
-import kotlin.coroutines.experimental.buildSequence
-
-fun fibonacci() = buildSequence {
+fun fibonacci() = sequence {
   var terms = Pair(0, 1)
 
   // this sequence is infinite
