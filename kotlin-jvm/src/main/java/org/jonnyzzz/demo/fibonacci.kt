@@ -1,12 +1,16 @@
 package org.jonnyzzz.demo
 
 fun fibonacci() = sequence {
-  var terms = Pair(0, 1)
+  var a_0 = 1
+  var a_1 = 1
 
   // this sequence is infinite
   while(true) {
-    yield(terms.first)
-    terms = Pair(terms.second, terms.first + terms.second)
+    val a_n = a_0 + a_1
+    a_0 = a_1
+    a_1 = a_n
+
+    yield(a_0)
   }
 }
 
