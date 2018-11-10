@@ -1,17 +1,12 @@
 package org.jonnyzzz.demo
 
-fun helloMessage(name: String) : String {
-  return "Hello, $name!"
-}
+fun helloMessage(name: String, hello: String = "Hello") = "${hello.capitalize()}, ${name.capitalize()}!"
 
-fun String.hello() : String {
-  return "Hello, $this!"
-}
+fun String.hello() = "Hello, $this!"
 
 val String.hello
-  get() : String {
-    return "Hello, $this!"
-  }
+  get() = "Hello, $this!"
+
 
 fun main(args: Array<String>) {
   println(helloMessage("Devoxx"))
@@ -19,9 +14,8 @@ fun main(args: Array<String>) {
   for (arg in args) {
 
     println(
-            arg.hello
+            helloMessage(arg.hello)
     )
   }
-
 }
 
