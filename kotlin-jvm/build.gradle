@@ -16,7 +16,32 @@ repositories{
 }
 
 group 'org.jonnyzzz'
-apply from: 'build-kotlin.gradle'
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+  compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+}
+
+[compileKotlin, compileTestKotlin].forEach {
+  it.kotlinOptions {
+    freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
+    jvmTarget = "1.8"
+  }
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+}
 
 
 task noop() {
