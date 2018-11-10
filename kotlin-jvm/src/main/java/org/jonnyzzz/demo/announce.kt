@@ -31,9 +31,9 @@ fun includes(x: () -> Unit) = Kotlin
 
 operator fun Any.unaryMinus() = Any()
 
-val Kotlin = Any()
+var Kotlin = Any()
 infix fun Any.Deep(a:Any) = Any()
-val Dive = Kotlin
+var Dive = Kotlin
 val Coding = Kotlin
 val at = Kotlin
 val Belgium = Kotlin
