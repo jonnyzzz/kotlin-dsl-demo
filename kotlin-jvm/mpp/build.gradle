@@ -76,4 +76,13 @@ afterEvaluate {
   }
 
   [compileKotlinJs, compileTestKotlinJs].each {it.dependsOn populateNodeModules }
+
+  /// https://youtrack.jetbrains.com/issue/KT-28106
+  /// that is the hack for now!
+  task nativeRun(type: Exec) {
+    def main = kotlin.targets.native.compilations.main
+    dependsOn main.linkTaskName('executable', 'debug')
+    executable main.getBinary("executable", 'debug').toString()
+  }
+  
 }
