@@ -1,0 +1,79 @@
+apply plugin: "kotlin-multiplatform"
+
+final String kotlinx_coroutines_version = '1.0.1'
+kotlin {
+  targets {
+    fromPreset(presets.jvm, 'jvm')
+    fromPreset(presets.js, 'js') {
+      compilations.all {
+        tasks[compileKotlinTaskName].kotlinOptions {
+          metaInfo = true
+          sourceMap = true
+          moduleKind = "commonjs"
+          main = "call"
+        }
+      }
+
+      fromPreset(presets.macosX64, 'native'){
+        compilations.main.outputKinds 'executable'
+      }
+    }
+  }
+
+  sourceSets {
+
+    commonMain {
+      dependencies {
+        implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
+        implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$kotlinx_coroutines_version"
+      }
+    }
+
+    commonTest {
+      dependencies {
+        implementation 'org.jetbrains.kotlin:kotlin-test-common'
+        implementation 'org.jetbrains.kotlin:kotlin-test-annotations-common'
+      }
+    }
+
+    jvmMain {
+      dependencies {
+        implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+        implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines_version"
+      }
+    }
+
+    jvmTest {
+      dependencies {
+        implementation 'org.jetbrains.kotlin:kotlin-test'
+        implementation 'org.jetbrains.kotlin:kotlin-test-junit'
+      }
+    }
+
+    jsMain {
+      dependencies {
+        implementation 'org.jetbrains.kotlin:kotlin-stdlib-js'
+        implementation 'org.jetbrains.kotlin:kotlin-test-js'
+        implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-js:$kotlinx_coroutines_version"
+      }
+    }
+  }
+}
+
+afterEvaluate {
+  task populateNodeModules(type: Sync) {
+    from compileTestKotlinJs.kotlinOptions.outputFile
+    from compileKotlinJs.kotlinOptions.outputFile
+
+    configurations.jsTestCompileClasspath.each {
+      from zipTree(it.absolutePath).matching {
+        include '*.js'
+        include '*.map'
+      }
+    }
+
+    into "${buildDir}/node_modules"
+  }
+
+  [compileKotlinJs, compileTestKotlinJs].each {it.dependsOn populateNodeModules }
+}

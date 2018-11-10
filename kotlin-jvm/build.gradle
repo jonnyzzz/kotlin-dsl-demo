@@ -20,13 +20,10 @@ group 'org.jonnyzzz'
 apply plugin: 'java'
 apply plugin: 'kotlin'
 
-repositories {
-  mavenCentral()
-}
-
-dependencies {
-  compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-  compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+allprojects {
+  repositories {
+    mavenCentral()
+  }
 }
 
 [compileKotlin, compileTestKotlin].forEach {
@@ -48,6 +45,10 @@ task noop() {
 }
 
 dependencies {
+  compile project(':mpp')
+  compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+  compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+  
   compile "org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.11"
 
   compile 'com.fasterxml.jackson.core:jackson-core:2.9.1'
