@@ -1,3 +1,4 @@
+@file:JvmName("MainKotlin")
 package org.jonnyzzz.demo
 
 fun helloMessage(name: String) : String {
