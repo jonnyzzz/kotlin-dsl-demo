@@ -8,17 +8,11 @@ repositories {
 dependencies {
   compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
   compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-  compile "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:0.19.2"
 }
 
-compileKotlin {
-  kotlinOptions {
-    jvmTarget = "1.8"
-  }
-}
-
-compileTestKotlin {
-  kotlinOptions {
+[compileKotlin, compileTestKotlin].forEach {
+  it.kotlinOptions {
+    freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
     jvmTarget = "1.8"
   }
 }
