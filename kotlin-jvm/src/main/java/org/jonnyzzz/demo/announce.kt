@@ -5,7 +5,20 @@ package org.jonnyzzz.demo
 
 fun main(args: Array<String>) {
 
-  `@jonnyzzz` and `@maartenballiauw` speak {
+  Devoxx Belgium
+
+  Kotlin Deep Dive in 4.2 parts {
+    with `@jonnyzzz`
+
+    on November 13 at 9.30
+
+    includes {
+//      Live Coding in IntelliJ IDEA
+    }
+  }
+
+
+  `@jonnyzzz` speak {
       Kotlin and `C#`
       + Live demos
       with Rider and IntelliJ IDEA
@@ -14,9 +27,31 @@ fun main(args: Array<String>) {
 
 }
 
+fun includes(x: () -> Unit) = Kotlin
+
+operator fun Any.unaryMinus() = Any()
+
+val Kotlin = Any()
+infix fun Any.Deep(a:Any) = Any()
+val Dive = Kotlin
+val Coding = Kotlin
+val at = Kotlin
+val Belgium = Kotlin
+val Devoxx = Kotlin
+val on = Kotlin
+
+infix fun Any.`@jonnyzzz`(x: Any) = Any()
+infix fun Any.Devoxx(x: Any) = Any()
+infix fun Any.IDEA(x: Any) = Any()
+infix fun Any.Live(x: Any) = Any()
+infix fun Any.with(x: Any) = Any()
+infix fun Any.November(x: Any) = Any()
+infix fun Any.parts(x: Any) = Any()
+infix fun Any.Belgium(x: Any) = Any()
+infix fun Any.Coding(x: Any) = Any()
+
 val NDCMinnesota = Any()
 infix fun Any.at(x:Any) = Any()
-val Kotlin = Any()
 operator fun Any.unaryPlus() = Any()
 val `C#` = Any()
 val Live = Any()
