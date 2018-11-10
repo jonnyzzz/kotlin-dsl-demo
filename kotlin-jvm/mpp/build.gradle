@@ -17,6 +17,10 @@ kotlin {
       fromPreset(presets.macosX64, 'native'){
         compilations.main.outputKinds 'executable'
       }
+      
+      fromPreset(presets.macosX64, 'nativeFx'){
+        compilations.main.outputKinds 'framework'
+      }
     }
   }
 
