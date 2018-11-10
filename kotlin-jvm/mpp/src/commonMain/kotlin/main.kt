@@ -1,3 +1,4 @@
+package org.jonnyzzz.demo
 
 fun helloMessage(name: String, hello: String = "Hello") = "${hello.capitalize()}, ${name.capitalize()}!"
 
