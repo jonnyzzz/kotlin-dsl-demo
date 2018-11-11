@@ -3,6 +3,32 @@
 package org.jonnyzzz.demo
 
 
+data class UserMessage(val name: String?,
+                       val hello: String)
+
+
+/*
+
+val q : Nothing = TODO()
+val z : String = q
+val y : Any = z
+val x : Any? = x
+
+*/
+
+fun findUser(name: String) : UserMessage? = TODO()
+
+fun findAllUsers() : List<UserMessage> = TODO()
+
+fun groupUsers() {
+
+  val helloToUsers = findAllUsers()
+          .filter { it.name?.length ?:0 > 5 }
+          .groupBy { it.hello }
+
+}
+
+
 fun searchForHello(name: String) : String? {
   return null
 }
