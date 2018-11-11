@@ -2,6 +2,9 @@
 
 package org.jonnyzzz.demo
 
+import java.util.concurrent.locks.Lock
+import java.util.concurrent.locks.ReentrantLock
+
 
 data class UserMessage(val name: String?,
                        val hello: String)
@@ -71,3 +74,34 @@ fun main(args: Array<String>) {
 
 }
 
+
+object WithLockInJava {
+
+
+  inline fun <T> withLock(lock: Lock, action: () -> T): T {
+    lock.lock()
+    try {
+      return action()
+    } finally {
+      lock.unlock()
+    }
+  }
+
+
+  @JvmStatic
+  fun main(args: Array<String>) {
+
+    val l = ReentrantLock()
+
+    withLock(l) {
+      doSomeWorkWithLock()
+      doSomeWorkWithLock()
+    }
+  }
+
+
+
+  private fun doSomeWorkWithLock() {
+
+  }
+}
