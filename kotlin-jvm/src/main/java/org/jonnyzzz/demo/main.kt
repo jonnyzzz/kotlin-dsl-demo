@@ -1,4 +1,3 @@
-@file:JvmName("MainKotlin")
 package org.jonnyzzz.demo
 
 
