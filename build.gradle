@@ -38,18 +38,22 @@ task noop() {
 }
 
 dependencies {
-  compile project(':mpp')
-  compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-  compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+  implementation project(':mpp')
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+  implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
   
-  compile "org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.11"
+  implementation "org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.11"
 
-  compile 'com.fasterxml.jackson.core:jackson-core:2.9.1'
-  compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.1'
-  compile 'com.fasterxml.jackson.core:jackson-databind:2.9.1'
+  implementation 'com.fasterxml.jackson.core:jackson-core:2.9.1'
+  implementation 'com.fasterxml.jackson.core:jackson-annotations:2.9.1'
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.1'
 
-  compile "org.jonnyzzz.kotlin.xml.bind:jdom:0.1.9"
-  compile "org.jonnyzzz.kotlin.xml.dsl:jdom:0.1.6"
+  implementation 'org.jdom:jdom2:2.0.6'
+  implementation "org.jonnyzzz.kotlin.xml.bind:api:0.1.9"
+  implementation "org.jonnyzzz.kotlin.xml.bind:jdom:0.1.9"
+  
+  implementation "org.jonnyzzz.kotlin.xml.dsl:api:0.1.6"
+  implementation "org.jonnyzzz.kotlin.xml.dsl:jdom:0.1.6"
 
 
   implementation "io.reactivex.rxjava2:rxjava:2.2.2"
